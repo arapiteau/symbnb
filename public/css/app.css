@@ -13,11 +13,17 @@ div.adtitle h1, div.adtitle p{
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
+div.adtitle .btn {
+    margin-top: 2em;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
 div.carousel-caption{
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
-.avatar{
+.avatar {
     max-width: 128px;
     max-height: 128px;
     border-radius: 50%;
@@ -35,4 +41,20 @@ div.carousel-caption{
 
 .datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
     color: firebrick !important;
+}
+
+span.rating i {
+    color: goldenrod;
+}
+
+.alert a {
+    text-decoration: none;
+}
+
+.alert .btn {
+    color: white;
+}
+
+.alert-light label, .alert-light legend, .card.bg-light label, .card.bg-light legend {
+    font-weight: bold;
 }

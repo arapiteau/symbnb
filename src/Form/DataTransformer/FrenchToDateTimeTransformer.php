@@ -28,5 +28,5 @@ class FrenchToDateTimeTransformer implements DataTransformerInterface
         }
 
         return $date;
-    }
+    } 
 }
