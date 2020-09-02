@@ -28,15 +28,15 @@ class StatsService {
     }
 
     public function getStats() {
-        $users = $statsService->getUsersCount();
-        $ads = $statsService->getAdsCount();
-        $bookings = $statsService->getBookingsCount();
-        $comments = $statsService->getCommentsCount();
+        $users = $this->getUsersCount();
+        $ads = $this->getAdsCount();
+        $bookings = $this->getBookingsCount();
+        $comments = $this->getCommentsCount();
         return compact('users', 'ads', 'bookings', 'comments');
     }
 
     public function getAdsStats($direction){
-        return $manager->createQuery(
+        return $this->manager->createQuery(
             'SELECT AVG(c.rating) as rating, a.title, a.id, u.firstName, u.lastName, u.picture
             FROM App\Entity\Comment c
             JOIN c.ad a

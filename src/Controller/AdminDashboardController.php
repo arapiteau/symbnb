@@ -15,11 +15,11 @@ class AdminDashboardController extends AbstractController
     public function index(EntityManagerInterface $manager, StatsService $statsService)
     {
         $stats = $statsService->getStats();
-        $bestAds = $statsService->getStatsAds('DESC');
-        $worstAds = $statsService->getStatsAds('ASC');
+        $bestAds = $statsService->getAdsStats('DESC');
+        $worstAds = $statsService->getAdsStats('ASC');
 
         return $this->render('admin/dashboard/index.html.twig', [
-            'stats' => compact('users', 'ads', 'bookings', 'comments'),
+            'stats' => $stats,
             'bestAds' => $bestAds,
             'worstAds' => $worstAds
         ]);
