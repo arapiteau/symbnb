@@ -147,7 +147,7 @@ class Ad
     /**
      * Retourne les jours où le logement est indisponible pour cette annonce
      *
-     * @return void Un tableau d'objets DateTime représentant les jours où le logement est occupé
+     * @return array Un tableau d'objets DateTime représentant les jours où le logement est occupé
      */
     public function getDaysNotAvailable() {
         $daysNotAvailable = [];
